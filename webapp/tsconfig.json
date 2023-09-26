@@ -3,8 +3,9 @@
     "target": "esnext",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"],
-      "mattermost-redux/*": ["../node_modules/@mattermost/webapp/packages/mattermost-redux/src/*"],
+      "@/*": [
+        "src/*"
+      ],
     },
     "lib": [
       "dom",
@@ -24,7 +25,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "experimentalDecorators": true,
-    "jsx": "react"
+    "jsx": "react",
+    "typeRoots": [
+      "./types"
+    ],
   },
   "include": [
     "src",
@@ -34,5 +38,5 @@
     "dist",
     "node_modules",
     "!node_modules/@types"
-  ]
+  ],
 }

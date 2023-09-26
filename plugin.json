@@ -1,7 +1,7 @@
 {
-    "id": "com.mattermost.plugin-starter-template",
-    "name": "Plugin Starter Template",
-    "description": "This plugin serves as a starting point for writing a Mattermost plugin.",
+    "id": "com.mattermost.file-previews",
+    "name": "File Previews Plugin",
+    "description": "",
     "homepage_url": "https://github.com/mattermost/mattermost-plugin-starter-template",
     "support_url": "https://github.com/mattermost/mattermost-plugin-starter-template/issues",
     "release_notes_url": "https://github.com/mattermost/mattermost-plugin-starter-template/releases/tag/v0.1.0",
@@ -23,6 +23,38 @@
     "settings_schema": {
         "header": "",
         "footer": "",
-        "settings": []
+        "settings": [
+            {
+                "key": "Backend",
+                "display_name": "Backend:",
+                "type": "dropdown",
+                "help_text": "Backend to use",
+                "default": "pdftron",
+                "options": [
+                    {
+                        "display_name": "PDFTron",
+                        "value": "pdftron"
+                    },
+                    {
+                        "display_name": "Gotenberg Server (not implemented)",
+                        "value": "gotenberg"
+                    }
+                ]
+            },
+            {
+                "key": "PDFTronLicenseKey",
+                "display_name": "PDFTron License Key",
+                "type": "text",
+                "help_text": "PDFTron License Key",
+                "default": ""
+            },
+            {
+                "key": "GotenbergServerURL",
+                "display_name": "Gotenberg server URL",
+                "type": "text",
+                "help_text": "The full URL to the Gotenberg server",
+                "default": ""
+            }
+        ]
     }
 }
